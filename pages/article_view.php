@@ -11,4 +11,26 @@
 <br>
 
 
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 ftco-animate">
+                <h2 class="mb-3">Subtitle</h2>
+                <p>
+                    <img src="<?php echo $imageurl; ?>" alt="" class="img-fluid">
+                </p>
+                
+                    
+            </div>
+            <div class="col-lg-6 ftco-animate">
+                <p><?php echo $content; ?></p>
+
+            </div>
+        </div> 
+
+    </div>
+    
+</section>
+
+
 <?php include_once("./includes/footer.php"); ?>
