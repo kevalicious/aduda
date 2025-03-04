@@ -1,4 +1,4 @@
-<?php error_reporting(0);
+<?php //error_reporting(0);
 $page = $_GET['page']; ?>
 <!DOCTYPE html>
 <html lang="en">

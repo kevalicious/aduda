@@ -1,3 +1,31 @@
+<?php
+require_once("./database/connection.php");
+$id = $_GET['id'];
+
+if(isset($id)){
+    $sql = "SELECT * FROM articles WHERE id = $id";
+    $article = mysqli_query($conn, $sql);
+    if(mysqli_num_rows($article) == 0){
+    echo "The article requested does not exist!";
+    exit;
+    }else{
+        while($single = mysqli_fetch_assoc($article))
+        {
+        $title = $single['title'];
+        $imageurl = $single['imageurl'];
+        $uploadtime = $single['uploadtime'];
+        $content = $single['content'];
+        
+    ?>
+   
+   <?php require_once("./pages/article_view.php"); exit; ?>
+
+<?php }}} ?>
+
+  
+
+
+
 <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
     <div class="overlay"></div>
     <div class="container">
